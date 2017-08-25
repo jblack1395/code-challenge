@@ -4,6 +4,9 @@ import hamming
 
 
 class HammingTest(unittest.TestCase):
+    def test_dna_strands(self):
+       self.assertEqual(7, hamming.compute('GAGCCTACTAACGGGAT', 
+'CATCGTAATGACGGCCT'))
 
     def test_identical_strands(self):
         self.assertEqual(0, hamming.compute('A', 'A'))
