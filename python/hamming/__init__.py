@@ -7,8 +7,4 @@
 def compute(s1, s2):
     if len(s1) != len(s2):
         raise ValueError("Undefined for sequences of unequal length")
-    n = 0 
-    for i in range(0, len(s1)): 
-       if s1[i] != s2[i]:
-          n += 1
-    return n
+    return sum(t1 != t2 for t1,t2 in  zip(s1, s2))
